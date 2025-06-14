@@ -21,3 +21,10 @@ The system consists of two Arduino units that communicate wirelessly.
   - **128x64 OLED Display**: Shows real-time status
 - Receives data from Transmitter
 - Triggers alert if condition is met:
+
+## 🧠 Alert Condition
+
+```c
+if ((PIR == HIGH || ultrasonic2_detected) && ultrasonic1_detected) {
+  trigger_alert();
+}
